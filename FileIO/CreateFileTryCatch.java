@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class CreateFileTryCatch {
     public static void main(String[] args) throws IOException {
-        String fileName = "C:\\Users\\Shuvo\\Download\\javaTest.txt";
+        String fileName = "C:\\Users\\Shuvo\\Downloads\\javaTest.txt";
         try {
             // Create a file object
             File file = new File(fileName);
@@ -23,7 +23,9 @@ public class CreateFileTryCatch {
 
             //Write to the file
             FileWriter writer = new FileWriter(file);
-            writer.write("This is Shuvo - Just wrote this text in above file");
+            writer.write("lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+                    + "Donec eget nisl eu lectus tincidunt tincidunt. "
+                    + "et consectetur nisl nunc eu lectus. ");
             writer.close();
             System.out.println("File written successfully");
 
