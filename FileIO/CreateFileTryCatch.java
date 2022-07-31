@@ -27,7 +27,7 @@ public class CreateFileTryCatch {
                     + "Donec eget nisl eu lectus tincidunt tincidunt. "
                     + "et consectetur nisl nunc eu lectus. ");
             writer.close();
-            System.out.println("File written successfully");
+            System.out.println("File has been written successfully");
 
             //Read the file
             FileReader reader = new FileReader(file);
