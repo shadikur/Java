@@ -12,24 +12,26 @@ public class CreateFileTryCatch {
         try {
             // Create a file object
             File file = new File(fileName);
-            // Create the file
-            file.createNewFile();
             // Check if the file exists
             if (file.exists()) {
-                System.out.println("File created successfully or already exists");
+                System.out.println("File is already exists");
             } else {
-                System.out.println("Failed to create the file");
+             // Create the file
+                file.createNewFile();
+                System.out.println("File has been created successfully");
             }
 
             //Write to the file
             FileWriter writer = new FileWriter(file);
-            writer.write("lorem ipsum dolor sit amet, consectetur adipiscing elit. \n"
+            //Append to the file
+            writer.append("lorem ipsum dolor sit amet, consectetur adipiscing elit. \n"
                     + "Donec eget nisl eu lectus tincidunt tincidunt. \n"
                     + "et consectetur nisl nunc eu lectus. ");
             writer.close();
             System.out.println("File has been written successfully");
 
             //Read the file
+            System.out.println("\nReading the file:\n");
             FileReader reader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
@@ -43,7 +45,7 @@ public class CreateFileTryCatch {
             System.out.println("There was an error creating the file"); // Print the self defined error message
         }
         finally {
-            System.out.println("This is finally block");
+            System.out.println("\nThis is finally block");
         }
     }
 }
