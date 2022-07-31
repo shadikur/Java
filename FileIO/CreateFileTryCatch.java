@@ -23,8 +23,8 @@ public class CreateFileTryCatch {
 
             //Write to the file
             FileWriter writer = new FileWriter(file);
-            writer.write("lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-                    + "Donec eget nisl eu lectus tincidunt tincidunt. "
+            writer.write("lorem ipsum dolor sit amet, consectetur adipiscing elit. \n"
+                    + "Donec eget nisl eu lectus tincidunt tincidunt. \n"
                     + "et consectetur nisl nunc eu lectus. ");
             writer.close();
             System.out.println("File has been written successfully");
@@ -41,6 +41,9 @@ public class CreateFileTryCatch {
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage()); // Print the compiler error message
             System.out.println("There was an error creating the file"); // Print the self defined error message
+        }
+        finally {
+            System.out.println("This is finally block");
         }
     }
 }
